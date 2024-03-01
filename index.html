@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEZSURBVHgBtdWxasJAHMfx36XBXpfSN+jWrWvXPkCHUuzcpQ6dSl+gtOBLOLg4uSjo4KxuTo4uTk4OCiqSKIqe+QtKDMFc7u99ISGXS/iQG3LC87x/IcQfLCXoZBMRhwtbiAgPOs1ZrV5av4LR/YODjx95HLvhyccndzoZKxTyS5imcHUydqIPPL9k8PUrcancuJuEjIZb9Lob6DTob+HPlT5AvedksFSL4GtukNT32zwA4ueccy+2G+s9wslJeoCLJAJcRAvgINqAKZIKMEFSA2kRIyAN4oIRISyg3LmFTpXiEtXiKnbOeInC0W8lm8vEzrGWKIpQ0R/kCaCUaoFR9vMaUq7ugkvWppUYbb++7ys6YKsDApsRsgPupnuErjrsBgAAAABJRU5ErkJggg==" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bookshelf</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+  
+  <script type="module" crossorigin src="/js_98_OlgaIK2023/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/js_98_OlgaIK2023/assets/support-ua-b9a9a02e.js">
+  <link rel="modulepreload" crossorigin href="/js_98_OlgaIK2023/assets/vendor-0cb09735.js">
+  <link rel="stylesheet" href="/js_98_OlgaIK2023/assets/support-ua-650ae349.css">
+</head>
+
+<body class="no-scroll">
+  <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+<header class="header">
+  <div class="container header-container">
+    <a href="./index.html" class="logo-link" aria-label="Bookshelf">
+      <svg class="icon-logo" width="109" height="28">
+        <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-logo-bookshelf"></use>
+      </svg>
+    </a>
+    <nav class="nav-menu">
+      <a href="./index.html" class="nav-link"  aria-label="Bookshelf main page">Home</a>
+      <a href="./shopping-list.html" class="nav-shopping" aria-label="Our shopping books list">Shopping list
+        <svg class="shopping-icon" width="20" height="20">
+          <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-uil_cart"></use>
+        </svg>
+      </a>
+    </nav>
+    <div class="theme-container">
+      <label for="theme" class="switch">
+        <input type="checkbox" class="switch_input" name="theme" id="theme" />
+        <span class="switch_slider"> </span>
+      </label>
+      <button class="btn-menu hidden" id="menu-button" type="button">
+        <svg class="icon-menu" width="28" height="28">
+          <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-align-left"></use>
+        </svg>
+      </button>
+      <button class="btn-close is-open" id="close-button" type="button">
+        <svg class="icon-close" width="28" height="28">
+          <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-x-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+</header>
+
+
+  <main>
+    <section class="menu-section">
+    <nav class="nav-menu-mob">
+ <a href="./index.html" class="home-page" aria-label="Bookshelf">Home</a>
+ <a href="./shopping-list.html" class="shopping-list-page" aria-label="Shopping books list">Shopping list
+    <svg class="shop-icon" width="20" height="20">
+        <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-uil_cart"></use>
+    </svg>
+            </a>
+    </nav>
+</section>
+   
+    <section class="homepage" id="homepage">
+  <div class="container navigation-category">
+    <aside class="aside-menu">
+      <ul class="category-list">
+        <li class="category-list-item" id="all-categories">
+          <h4 class="category-name">All categories</h4>
+        </li>
+      </ul>
+      <aside class="support-box">
+        <h3 class="support-title">
+          Support Ukraine
+          <svg class="support-svg" width="20px" height="32px">
+            <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-Vector"></use>
+          </svg>
+        </h3>
+        <div class="slider-container">
+          <ul class="support-list js-support"></ul>
+        </div>
+
+        <div class="button-support slider-button">
+          <button class="support-button">
+            <svg class="support-button-svg">
+              <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-arrowDown"></use>
+            </svg>
+          </button>
+        </div>
+      </aside>
+    </aside>
+
+    <div class="gallery">
+      <div class="spinner-wrapper">
+        <div class="backdrop-loader hidden"></div>
+        <span class="loader hidden"></span>
+      </div>
+      <div class="title-wrapper">
+        <h2 class="category-title"></h2>
+        <h2 class="category-title-color"></h2>
+      </div>
+      <ul class="gallery-list"></ul>
+    </div>
+  </div>
+
+  
+  
+  
+  
+
+</section>
+
+    
+<button
+  class="scroll-up-btn visually-hidden-scroll js-scroll-btn"
+  type="button"
+>
+  <svg class="scroll-top_icon" width="24" height="24">
+    <use href="/js_98_OlgaIK2023/assets/icons-ed26a162.svg#icon-scroll-up"></use>
+  </svg>
+</button>
+
+
+
+
+  </main>
+
+  
+</body>
+
+</html>
